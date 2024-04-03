@@ -1,5 +1,5 @@
 # spring-boot-api
-CRUD REST API that allows for managing tours and tour packages across the different regions of Oregon. Includes navigation via hyperlinks.
+CRUD REST API that allows for managing tours and tour packages across the different regions of Oregon. Utilizes Spring Boot, Spring Data JPA, and Spring Data REST. 
 Derived from the tutorial found [here](https://www.linkedin.com/learning/creating-your-first-spring-boot-microservice/paging-and-sorting?autoSkip=true&resume=false).
 
 ## Running the API
