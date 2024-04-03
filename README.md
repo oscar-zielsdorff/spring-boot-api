@@ -14,8 +14,9 @@ There are a few options for sending requests after the API is running:
 ### Postman 
 Use the included postman JSON file to import a set of requests.
 
-### Web Browser (GET only)
-Navigate to http://localhost:8080 on a browser to view the API via GET requests (some endpoints won't load).
+### Web Browser 
+Navigate to http://localhost:8080 on a browser to view the API via HAL Explorer.
+Some attributes may need to be manually added to post requests (e.g. code for TourPackages).
 
 ### Curl
 You can send curl requests to the API via a terminal. Below are some examples:

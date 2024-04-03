@@ -6,10 +6,13 @@ import com.example.oz.springbootapi.repository.TourPackageRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+/**
+ * Service class for interacting with tour packages.
+ */
 @Service
 public class TourPackageService {
 
-    private TourPackageRepository tourPackageRepository;
+    private final TourPackageRepository tourPackageRepository;
 
     @Autowired
     public TourPackageService(TourPackageRepository tourPackageRepository) {

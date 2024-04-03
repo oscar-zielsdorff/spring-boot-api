@@ -9,11 +9,16 @@ import com.example.oz.springbootapi.repository.TourRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Optional;
+
+/**
+ * Service class for interacting with tours.
+ */
 @Service
 public class TourService {
 
-    private TourRepository tourRepository;
-    private TourPackageRepository tourPackageRepository;
+    private final TourRepository tourRepository;
+    private final TourPackageRepository tourPackageRepository;
 
     @Autowired
     public TourService(TourRepository tourRepository, TourPackageRepository tourPackageRepository) {
@@ -28,10 +33,18 @@ public class TourService {
     public Tour createTour(String title, String description, Integer price, String duration,
                            Difficulty difficulty, Region region, String tourPackageName) {
 
-        TourPackage tourPackage = tourPackageRepository.findByName(tourPackageName)
-                .orElseThrow(() -> new RuntimeException("Tour package does not exist"));
+        Optional<Tour> existingTour = tourRepository.findByTitle(title);
+        if (existingTour.isPresent()) {
+            return existingTour.get();
+        }
 
-        return tourRepository.save(new Tour(title, description, price, duration, difficulty, region, tourPackage));
+        Optional<TourPackage> existingTourPackage = tourPackageRepository.findByName(tourPackageName);
+        if (existingTourPackage.isPresent()) {
+            return tourRepository.save(new Tour(title, description, price, duration, difficulty,region, existingTourPackage.get()));
+        }
+        else {
+            throw new RuntimeException("Could not create tour, specified tour package was not found");
+        }
     }
 
     /**

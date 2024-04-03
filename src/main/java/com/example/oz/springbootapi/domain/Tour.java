@@ -13,6 +13,8 @@ public class Tour {
     @Id
     @GeneratedValue
     private Integer id;
+
+    @Column(unique = true)
     private String title;
 
     @Column(length = 2000)
