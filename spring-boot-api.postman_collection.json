@@ -230,7 +230,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8080/tours?size=2&page=0&sort=id,asc",
+					"raw": "http://localhost:8080/tours?size=2&page=0",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -247,10 +247,6 @@
 						{
 							"key": "page",
 							"value": "0"
-						},
-						{
-							"key": "sort",
-							"value": "id,asc"
 						}
 					]
 				}
@@ -263,7 +259,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8080/tours/search/findByTourPackageCode?size=2&page=0&sort=title,asc&code=CS",
+					"raw": "http://localhost:8080/tours/search/findByTourPackageCode?code=CS&size=2&page=0&sort=title,asc",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -276,6 +272,10 @@
 					],
 					"query": [
 						{
+							"key": "code",
+							"value": "CS"
+						},
+						{
 							"key": "size",
 							"value": "2"
 						},
@@ -286,10 +286,6 @@
 						{
 							"key": "sort",
 							"value": "title,asc"
-						},
-						{
-							"key": "code",
-							"value": "CS"
 						}
 					]
 				}
