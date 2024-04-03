@@ -131,6 +131,26 @@
 			"response": []
 		},
 		{
+			"name": "Get TourPackage",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/tourPackages/EW",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"tourPackages",
+						"EW"
+					]
+				}
+			},
+			"response": []
+		},
+		{
 			"name": "Create TourPackage",
 			"request": {
 				"method": "POST",
@@ -152,26 +172,6 @@
 					"port": "8080",
 					"path": [
 						"tourPackages"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Get TourPackage",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "http://localhost:8080/tourPackages/EW",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8080",
-					"path": [
-						"tourPackages",
-						"EW"
 					]
 				}
 			},
@@ -219,6 +219,78 @@
 					"path": [
 						"tourPackages",
 						"EW"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Paginated Tours",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/tours?size=2&page=0&sort=id,asc",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"tours"
+					],
+					"query": [
+						{
+							"key": "size",
+							"value": "2"
+						},
+						{
+							"key": "page",
+							"value": "0"
+						},
+						{
+							"key": "sort",
+							"value": "id,asc"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Paginated Tour Search",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/tours/search/findByTourPackageCode?size=2&page=0&sort=title,asc&code=CS",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"tours",
+						"search",
+						"findByTourPackageCode"
+					],
+					"query": [
+						{
+							"key": "size",
+							"value": "2"
+						},
+						{
+							"key": "page",
+							"value": "0"
+						},
+						{
+							"key": "sort",
+							"value": "title,asc"
+						},
+						{
+							"key": "code",
+							"value": "CS"
+						}
 					]
 				}
 			},
