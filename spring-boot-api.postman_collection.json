@@ -1,0 +1,228 @@
+{
+	"info": {
+		"_postman_id": "daede975-6f9a-402b-bd8d-0ba182e38b6b",
+		"name": "spring-boot-api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "16154181"
+	},
+	"item": [
+		{
+			"name": "/",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080",
+					"host": [
+						"localhost"
+					],
+					"port": "8080"
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "tours",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/tours",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"tours"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "tours/search",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/tours/search",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"tours",
+						"search"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "tours/search/findByTourPackageCode",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "tourPackages",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/tourPackages",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"tourPackages"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "tourPackages/search",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/tourPackages/search",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"tourPackages",
+						"search"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "tourPackages/search/findByName",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/tourPackages/search/findByName?name=Rivers%20and%20Sea",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"tourPackages",
+						"search",
+						"findByName"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Rivers%20and%20Sea"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create TourPackage",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"code\": \"EW\",\r\n    \"name\": \"East to West\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/tourPackages",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"tourPackages"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get TourPackage",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/tourPackages/EW",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"tourPackages",
+						"EW"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Change TourPackage",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"East and West\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/tourPackages/EW",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"tourPackages",
+						"EW"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete TourPackage",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/tourPackages/EW",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"tourPackages",
+						"EW"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

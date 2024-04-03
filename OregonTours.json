@@ -1,0 +1,38 @@
+[
+  {
+    "packageType": "Desert Trip",
+    "title": "The Dunes of the East",
+    "description": "Explore the deserts of eastern Oregon.",
+    "duration": "3 days",
+    "price": "500",
+    "region": "EASTERN",
+    "difficulty": "VARIES"
+  },
+  {
+    "packageType": "Rivers and Sea",
+    "title": "The Oregon Coast",
+    "description": "Explore the west coast.",
+    "duration": "3 days",
+    "price": "650",
+    "region": "COAST",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "packageType": "City and Suburbs",
+    "title": "The City of Portland",
+    "description": "Explore the Portland Metro area",
+    "duration": "3 days",
+    "price": "800",
+    "region": "PORTLAND_METRO",
+    "difficulty": "EASY"
+  },
+  {
+    "packageType": "City and Suburbs",
+    "title": "The City of Hillsboro",
+    "description": "Explore the suburbs of portland: Hillsboro.",
+    "duration": "1 days",
+    "price": "300",
+    "region": "PORTLAND_METRO",
+    "difficulty": "VARIES"
+  }
+]
